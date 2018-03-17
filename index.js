@@ -10,5 +10,6 @@ const todoCtrl = new TodoController();
 
 tg.router.when(
         new Telegram.TextCommand('/add', 'addCommand'),todoCtrl).
-        when(new Telegram.TextCommand('/get', 'getCommand'),todoCtrl)
+        when(new Telegram.TextCommand('/get', 'getCommand'),todoCtrl).
+        when(new Telegram.TextCommand('/check','checkCommand'),todoCtrl)
         .otherwise(new OtherwiseController());
